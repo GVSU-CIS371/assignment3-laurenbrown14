@@ -4,13 +4,13 @@
     <Hot v-else />
     <Contents>
       <template v-slot:top>
-        <Creamer />
+        <Creamer :type="creamer" />
       </template>
       <template v-slot:mid>
-        <Syrup />
+        <Syrup :type="syrup" />
       </template>
       <template v-slot:bottom>
-        <Base />
+        <Base :type="base" />
       </template>
     </Contents>
   </Mug>
@@ -26,6 +26,9 @@ import Cold from "./Cold.vue";
 
 type Props = {
   isIced: boolean;
+  creamer: any;
+  syrup: any;
+  base: any;
 };
 defineProps<Props>();
 </script>
