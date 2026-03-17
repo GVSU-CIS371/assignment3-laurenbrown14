@@ -1,7 +1,8 @@
 <template>
-  <div class="froth">
+  <div v-if="type.id !== 'c1'" class="froth">
     <div
-      v-for=" in 5"
+      v-for="n in 5"
+      :key="n"
       class="foam"
       :style="{ '--foam-color': type.color }"
     ></div>

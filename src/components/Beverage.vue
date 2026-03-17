@@ -2,13 +2,16 @@
   <Mug>
     <Cold v-if="isIced" />
     <Hot v-else />
+
     <Contents>
       <template v-slot:top>
-        <Creamer :type="creamer" />
+        <Creamer v-if="creamer.id !== 'c1'" :type="creamer" />
       </template>
+
       <template v-slot:mid>
-        <Syrup :type="syrup" />
+        <Syrup v-if="syrup.name !== 'No Syrup'" :type="syrup" />
       </template>
+
       <template v-slot:bottom>
         <Base :type="base" />
       </template>

@@ -17,7 +17,6 @@ defineProps<{ type: SyrupType }>();
     var(--syrup-color) 20px
   );
   background-size: 28px, 28px;
-  position: relative;
   width: 100%;
   height: 20%;
   animation: pour-tea 2s 1s forwards;
